@@ -1,0 +1,116 @@
+.dashboard-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  color: #333;
+  transition: background-color 0.3s ease;
+  will-change: background-color;
+}
+
+.welcome-banner {
+  background: linear-gradient(135deg, #0056b3, #003f7f);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 64, 128, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  will-change: box-shadow, transform;
+}
+
+.welcome-banner:hover {
+  box-shadow: 0 10px 30px rgba(0, 64, 128, 0.5);
+  transform: translateY(-5px);
+}
+
+.welcome-banner h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease;
+}
+
+.welcome-banner p {
+  margin-top: 6px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  opacity: 0.9;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+}
+
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 24px 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.stat-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.03);
+}
+
+.stat-icon {
+  font-size: 3.6rem;
+  color: #0056b3;
+  width: 70px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+  color: #003f7f;
+}
+
+.stat-content h3 {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+.stat-card:hover .stat-content h3 {
+  color: #004085;
+}
+
+.stat-value {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.stat-change {
+  font-size: 1rem;
+  margin-top: 6px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.stat-change.positive {
+  color: #28a745; /* verde brillante */
+}
+
+.stat-change.negative {
+  color: #dc3545; /* rojo vibrante */
+}

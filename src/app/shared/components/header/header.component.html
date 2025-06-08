@@ -1,0 +1,13 @@
+<header class="header">
+    <button class="menu-btn" (click)="toggleSidebar()">
+<i [ngClass]="isSidebarOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+</button>
+
+    <div class="header-actions">
+      <button class="icon-btn" (click)="toggleDarkMode()">
+        <i *ngIf="isDarkMode" class="fa-solid fa-brightness-low icon"></i>
+        <i *ngIf="!isDarkMode" class="fa-solid fa-moon icon"></i>
+      </button>
+<i class="fa-solid fa-right-from-bracket icon logout" (click)="logout()"></i>
+    </div>
+  </header>

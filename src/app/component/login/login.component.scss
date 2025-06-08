@@ -1,0 +1,177 @@
+/* Contenedor principal con imagen de fondo */
+.login-container {
+   background-image: url('https://blogconexion.senati.edu.pe/wp-content/uploads/2021/07/IPSOS-SENATI.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Capa oscura encima de la imagen de fondo */
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Contenedor del formulario */
+.login-form-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.05); /* sutil fondo claro */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  max-width: 400px;
+  width: 100%;
+  color: white;
+  backdrop-filter: blur(10px); /* efecto vidrio */
+}
+
+/* Título */
+.login-form-container h2 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+/* Header con logo */
+.login-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.logo-image {
+  width: 200px;
+  max-width: 100%;
+  background: transparent;
+}
+
+/* Formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+/* Inputs */
+.login-form-container input[type="email"],
+.login-form-container input[type="password"],
+.login-form-container input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid white;
+  border-radius: 6px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.login-form-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-form-container input:focus {
+  border-color: #00aaff;
+  outline: none;
+}
+
+/* Icono de ojo para contraseña */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 2.5rem;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mensajes de error */
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.875rem;
+}
+
+.login-error {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Footer */
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.remember-me label {
+  font-size: 0.875rem;
+  color: white;
+}
+
+.forgot-password {
+  color: #00bfff;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Botón de login */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0047ff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0037cc;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}

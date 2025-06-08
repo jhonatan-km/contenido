@@ -1,0 +1,53 @@
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <h1 class="sidebar-title">Blackboard</h1>
+   <i class="fa-solid fa-graduation-cap icon"></i>
+  </div>
+  <nav class="sidebar-nav">
+    <ul>
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active">
+          <span class="icon"><i class="fa-solid fa-house"></i></span>
+          <span class="text">Inicio</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/docentes" routerLinkActive="active">
+          <span class="icon"><i class="fa-solid fa-chalkboard-teacher"></i></span>
+          <span class="text">Docentes</span>
+        </a>
+      </li>
+      <li>
+  <a routerLink="/contenido-curricular" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <span class="icon"><i class="fa-solid fa-table-columns"></i></span>
+    <span class="text">Contenido Curricular</span>
+  </a>
+</li>
+
+      <li>
+        <a routerLink="/alumnos" routerLinkActive="active">
+          <span class="icon"><i class="fa-solid fa-user-graduate"></i></span>
+          <span class="text">Alumnos</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/evaluaciones" routerLinkActive="active">
+          <span class="icon"><i class="fa-solid fa-clipboard-check"></i></span>
+          <span class="text">Evaluaciones</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/reportes" routerLinkActive="active">
+          <span class="icon"><i class="fa-solid fa-chart-line"></i></span>
+          <span class="text">Reportes</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/configuracion" routerLinkActive="active">
+          <span class="icon"><i class="fa-solid fa-cogs"></i></span>
+          <span class="text">Configuración</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
